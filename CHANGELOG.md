@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0 (2025-12-25)
+
+
+### Features
+
+* **config:** add type discriminators to action models ([8584472](https://github.com/Pushikoo/pushikoo-processer-re/commit/85844721168f6979818b02fe2636755b0a1674b5))
+* v0 ([0c0157d](https://github.com/Pushikoo/pushikoo-processer-re/commit/0c0157df94e4d71773eafcf89e1cd2888ac45126))
+
 ## [0.1.2](https://github.com/Pushikoo/pushikoo-adapter-testprocesser/compare/v0.1.1...v0.1.2) (2025-12-15)
 
 
