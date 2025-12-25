@@ -1,3 +1,4 @@
+from typing import Literal
 from pydantic import BaseModel, Field
 from pushikoo_interface import ProcesserConfig, ProcesserInstanceConfig
 
@@ -7,6 +8,7 @@ class Terminate(BaseModel):
     Terminate action - stops processing and terminates the flow when the pattern matches.
     """
 
+    type: Literal["terminate"] = "terminate"
     pass
 
 
@@ -14,6 +16,8 @@ class Replace(BaseModel):
     """
     Replace action - replaces the matched pattern with the specified string.
     """
+
+    type: Literal["replace"] = "replace"
 
     replace: str = Field(
         ..., description="The string to replace the matched pattern with"

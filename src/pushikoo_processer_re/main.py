@@ -6,7 +6,7 @@ from pushikoo_interface import (
     Struct,
     TerminateFlowException,
 )
-from pushikoo_interface.structure import StructText, StructTitle
+from pushikoo_interface.structure import StructText
 
 from pushikoo_processer_re.config import (
     AdapterConfig,
@@ -98,8 +98,6 @@ class RegexProcesser(
         """
         for item in content.content:
             if isinstance(item, StructText):
-                item.text = self._process_text(item.text)
-            elif isinstance(item, StructTitle):
                 item.text = self._process_text(item.text)
             # StructImage and StructURL are not text-based, skip them
 
