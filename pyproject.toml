@@ -8,9 +8,9 @@ classifiers = [
   "Programming Language :: Python :: 3",
   "Operating System :: OS Independent",
 ]
-dependencies = ["pushikoo-interface>=0.3.0", "requests", "loguru"]
-description = "TestProcesser for pushikoo-adapter development as a template."
-name = "pushikoo-adapter-testprocesser"
+dependencies = ["pushikoo-interface>=1.0.2", "loguru"]
+description = "A regex-based text processer for Pushikoo with configurable find/replace and terminal rules."
+name = "pushikoo-processer-re"
 readme = "README.md"
 requires-python = ">=3.10"
 dynamic = ['version']
@@ -19,7 +19,7 @@ dynamic = ['version']
 dev = ["ruff", "pytest"]
 
 [project.urls]
-"Homepage" = "https://github.com/Pushikoo/pushikoo-adapter-testprocesser"
+"Homepage" = "https://github.com/Pushikoo/pushikoo-processer-re"
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
@@ -32,5 +32,4 @@ exclude = ["/.github", "/.vscode", "/uv.lock", "/.gitignore"]
 source = "vcs"
 
 [project.entry-points."pushikoo.adapter"]
-# TODO: Define your adapter export point here
-testprocesser = "pushikoo_adapter_testprocesser:TestProcesser"
+re = "pushikoo_processer_re:RegexProcesser"
